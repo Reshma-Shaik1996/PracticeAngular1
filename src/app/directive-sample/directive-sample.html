@@ -1,0 +1,61 @@
+<h3>directive-sample works!</h3>
+
+<h2> *ngIf </h2>
+<span>Enter a number</span>
+
+<input type="text" [(ngModel)]="num" />
+
+<div *ngIf="num % 2 == 0; then Ifblock else elseblock"></div>
+
+<ng-template #Ifblock>
+    <p>The number {{ num }} is Even</p>
+</ng-template>
+
+<ng-template #elseblock>
+    <p>The number {{ num }} is Odd</p>
+</ng-template>
+ 
+<h2> *ngFor List</h2>
+<ul>
+    <li *ngFor="let color of colors">
+         {{ color }}
+    </li>
+</ul>
+
+<h2> *ngFor Dropdown</h2>
+
+<select [(ngModel)]="selectedColor">
+    <option *ngFor="let color of colors">
+         {{ color }}
+    </option>
+</select>
+<p> Selected Color is: {{ selectedColor }} -of which the table content color changes</p>
+
+ <h3> Table for Product class array items </h3>
+
+ <table border="1">
+     <tr>
+         <th> Product Id </th>
+         <th> Product Code </th>
+         <th> Product Name </th>
+         <th> Price </th>
+     </tr>
+     <!-- <tr *ngFor="let product of products"  [class.r1]="product.price > 5000" [class.b1]=" product.price <= 5000"> -->
+
+        <!-- <tr *ngFor="let product of products"  [ngClass]="{'r1': product.price > 600, 'b1': product.price <= 600 }"> -->
+        
+<tr *ngFor="let product of products"  [style.color]="selectedColor">
+        <td> {{ product.productId }} </td>
+        <td> {{ product.productcode }} </td>
+         <td> {{ product.productName }} 
+            <input type="button" value="Like" [appFavs] = "selectedColor" />
+         </td>
+         <td> {{ product.price }} </td>
+     </tr>
+    </table>
+<p>why is this not working?
+
+</p>
+    <input type="button" value="Add Product" (click)="addNewProduct()" />
+
+    <input type="button" value="Remove Product" (click)="removeProduct()" />
