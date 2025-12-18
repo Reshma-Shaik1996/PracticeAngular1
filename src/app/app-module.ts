@@ -7,19 +7,28 @@ import { DatabindingComponent } from './databinding-component/databinding-compon
 import { DirectiveSample } from './directive-sample/directive-sample';
 import { FormsModule } from '@angular/forms';
 import { Favs } from './custom/favs';
+import { Pipesample } from './pipesample/pipesample';
+import { MypipePipe } from './custom/mypipe-pipe';
+import { Router, RouterModule } from '@angular/router';
+import { Menu } from './menu/menu';
+
+
 
 @NgModule({
   declarations: [
     App,
     DatabindingComponent,
     DirectiveSample,
-    Favs
+    Menu,
+    Favs,
+    Pipesample,
+    MypipePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    RouterModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

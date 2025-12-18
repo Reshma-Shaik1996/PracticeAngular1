@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h3 class="text-primary text-center">Pipe Sample</h3>
+    <div class="card p-3 shadow-sm">
+        <p class="mb-2"><strong>Product ID:</strong> {{ product.productId | mypipe: 'M': 'X'}}</p>
+        <p class="mb-2"><strong>Product Name:</strong> {{ product.productName }}</p>
+        <p class="mb-2"><strong>Product Code:</strong> {{ product.productcode | uppercase}}</p>
+        <p class="mb-0"><strong>Product Price:</strong> {{ product.price | currency:'USD' }}</p>
+        <p class="mb-0"><strong>Date of Birth:</strong> {{ DOB  | date: 'dd MMM yyyy'}}</p>
+    </div>
+</div>

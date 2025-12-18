@@ -23,7 +23,6 @@ export class DirectiveSample {
 
     this.products = [p1, p2, p3];
   }
-
   addNewProduct() {
     let newProductId = this.products.length + 1;
     let newProduct = new Product(newProductId, 'PRD' + (1000 + newProductId), 'Product ' + newProductId, 100 * newProductId);
