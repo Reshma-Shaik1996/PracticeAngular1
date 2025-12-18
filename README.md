@@ -15,3 +15,5 @@ npm install bootstrap  -—save
 Custom pipe: - 
 
 npx ng g p custom/mypipe
+
+Routes
