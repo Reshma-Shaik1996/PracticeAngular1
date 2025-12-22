@@ -1,0 +1,18 @@
+<p>customer-list works!</p>
+
+<div class="row mt-4">
+        <div class="col-lg-6 offset-lg-3">
+<table class="table table-bordered mt-3" >
+                <thead class="table-light">
+                    <tr>
+                        <th>Customer List</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of customers">
+                        <td>{{ customer }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -1,0 +1,14 @@
+
+<div>
+<span class="text-primary h4">Enter Customer Name</span>
+<input type="text" [(ngModel)]="customerName" class="form-control w-25 d-inline-block mx-3" placeholder="Customer Name"/>
+<input type="button" value="Add Customer" (click)="addCustomer()" class="btn btn-success"/>
+</div>
+<p>{{customerList |json}}</p>
+
+<br/><br/>
+<hr />
+<div class="mt-4">
+
+<app-customer-list [customers]="customerList"></app-customer-list>
+</div>

@@ -7,4 +7,17 @@
         <p class="mb-0"><strong>Product Price:</strong> {{ product.price | currency:'USD' }}</p>
         <p class="mb-0"><strong>Date of Birth:</strong> {{ DOB  | date: 'dd MMM yyyy'}}</p>
     </div>
+
+    <input type="button" value="Back to Directive" (click)="redirect()" class="btn btn-secondary mt-3" />
 </div>
+<br/>
+<hr/>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" routerLinkActive="active" routerLink="personal">Personal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="education">Education</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
